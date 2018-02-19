@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :idea do
-    title "MyString"
+    title "Gandalf"
     body "MyString"
   end
 end
