@@ -16,4 +16,5 @@ RSpec.describe Idea, type: :model do
       expect(FactoryBot.create(:idea)).to be_valid
     end
   end
+  
 end
