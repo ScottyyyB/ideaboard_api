@@ -1,7 +1,7 @@
 class Api::V1::IdeasController < ApplicationController
   def index
-    @ideas = Idea.order("created_at DESC")
-    render json: @ideas
+    ideas = Idea.order("created_at DESC")
+    render json: ideas, each_serializer: IdeasSerializer
   end
 
   def create

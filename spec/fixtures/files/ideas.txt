@@ -1,0 +1,3 @@
+[{"id"=>Idea.third.id, "title"=>"Gandalf", "body"=>"Is the freaking best!", "date"=>"#{Date.today}"},
+ {"id"=>Idea.second.id, "title"=>"Gandalf", "body"=>"Is the freaking best!", "date"=>"#{Date.today}"},
+ {"id"=>Idea.first.id, "title"=>"Gandalf", "body"=>"Is the freaking best!", "date"=>"#{Date.today}"}]
