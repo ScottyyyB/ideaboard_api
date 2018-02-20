@@ -5,8 +5,8 @@ class Api::V1::IdeasController < ApplicationController
   end
 
   def create
-    @idea = Idea.create(idea_params)
-    render json: @idea
+    idea = Idea.create(idea_params)
+    render json: idea, serializer: IdeasSerializer
   end
 
   def update

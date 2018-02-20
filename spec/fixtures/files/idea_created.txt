@@ -1,0 +1,1 @@
+{"id"=>Idea.last.id, "title"=>"Gandalf", "body"=>"Shall pass", "date"=>"#{Date.today}"}
