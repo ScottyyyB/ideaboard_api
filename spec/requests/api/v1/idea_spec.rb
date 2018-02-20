@@ -18,11 +18,25 @@ RSpec.describe Api::V1::IdeasController, type: :request do
   describe 'POST /api/v1/ideas' do
     it 'should create an idea' do
       post '/api/v1/ideas', params: {
-        idea: { title: 'Gandalf', body: 'Shall pass' }
+        idea: {
+          title: 'Gandalf', body: 'Shall pass' }
       }, headers: headers
+
       expect(response.status).to eq 200
-      expected_response = eval(file_fixture('idea_created.txt').read)
-      expect(response_json).to eq expected_response.as_json
+      expect(response_json).to eq expected_response('idea_created.txt').as_json
+    end
+  end
+
+  describe 'PUT /api/v1/ideas' do
+    it 'should update a specific idea' do
+      put "/api/v1/ideas/#{Idea.first.id}", params: {
+        idea: {
+          title: 'Gandalf', body: 'Is the best'
+        }
+      }, headers: headers
+
+      expect(response.status).to eq 200
+      expect(response_json).to eq expected_response('idea_updated.txt').as_json
     end
   end
 end

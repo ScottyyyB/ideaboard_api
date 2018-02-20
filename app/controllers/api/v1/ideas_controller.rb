@@ -10,9 +10,9 @@ class Api::V1::IdeasController < ApplicationController
   end
 
   def update
-    @idea = Idea.find(params[:id])
-    @idea.update_attributes(idea_params)
-    render json: @idea
+    idea = Idea.find(params[:id])
+    idea.update_attributes(idea_params)
+    render json: idea, serializer: IdeasSerializer
   end
 
   def destroy

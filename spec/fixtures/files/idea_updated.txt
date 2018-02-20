@@ -1,0 +1,1 @@
+{"id"=>Idea.first.id, "title"=>"Gandalf", "body"=>"Is the best", "date"=>"#{Date.today}"}
